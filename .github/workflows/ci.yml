@@ -10,40 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Say hello
         run: echo "Hello! The workflow is working!"
-```
-
-5. Click **"Commit changes"** → **"Commit changes"** again
-
-> **What does this do?** It tells GitHub's robot to run whenever you push code to `main`. The `workflow_dispatch` part lets you also trigger it manually. The job itself just checks out your code and prints a message — simple but enough to get a green checkmark.
-
----
-
-## Step 3: Wait for the Workflow to Run
-
-1. Click the **Actions** tab at the top of your repo
-2. You should see your workflow running (yellow circle = in progress, green checkmark = success, red X = failed)
-3. Wait about 30–60 seconds for it to finish
-4. It should turn into a **green checkmark** ✅
-
-If it fails, click on it to see the error message.
-
----
-
-## Step 4: Get the Status Badge Markdown
-
-1. Go to the **Actions** tab
-2. Click on your workflow name ("CI") in the left sidebar
-3. Click the **three dots `•••`** button in the upper right area of the page
-4. Select **"Create status badge"**
-5. A popup appears — just click **"Copy status badge Markdown"**
-
-It will look like this:
-```
-![CI](https://github.com/YOUR_USERNAME/YOUR_REPO/actions/workflows/ci.yml/badge.svg)
